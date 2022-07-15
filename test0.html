@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #bottom{
+            height: 500px;
+        }
+        button{
+            border: 0px solid white;
+            background-color: white;
+        }
+        #btn_n{
+            background: white;
+            width: 300px;
+            height: 300px;
+        }
+        #box_x{
+            background: white;
+            border-radius: 10px 10px 10px 10px ;
+        }
+        #box_s{
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 50px;
+            border-radius: 10px 10px 10px 10px ;
+            padding: 20px;
+
+        }
+        #box_s:hover{
+            background: rgb(168, 168, 168);
+        }
+        #I_size{
+            width: 200px;
+            height: 200px;
+        }
+        #IM_size{
+            width: 500px;
+            height: 500px;
+        }
+        
+        .con{
+            margin: 0 auto;
+            text-align: center;
+        }
+        #head{
+            font-family: 'Courier New', Courier, monospace;
+            height: 120px;
+            background: rgb(255, 255, 255);
+            
+        }
+        #cc{
+            margin: auto;
+            border-top: 1px solid rgb(168, 168, 168);
+            width: 200px;
+        }
+        .text_d{
+            text-decoration: none;
+        }
+        a:hover{
+            background: rgb(168, 168, 168);
+        }
+        #ar{
+            display: inline;
+        }
+
+        
+    </style>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="con">
+
+        <div id="head">
+            <br>
+            <h1><b style="color: rgb(83, 83, 83);">A</b> </h1>
+            <div id="cc">
+                <a href="#" class="text_d" style="color: rgb(141, 141, 141);margin-right: 50px;">추천</a> 
+                <a href="test1-1.html" target="_blank" class="text_d" style="color: rgb(141, 141, 141);">찜한 것</a>
+            </div>
+            
+
+            
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="background-color: rgb(83, 83, 83); padding: 40px;" >
+            <div class="carousel-indicators" >
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner" id="IM_size" style="margin: auto;">
+              <div class="carousel-item active">
+                <img src="녹차이미지.png" class="d-block w-100" alt="alt"  >
+              </div>
+              <div class="carousel-item">
+                <img src="사과이미지.png" class="d-block w-100" alt="alt"  >
+              </div>
+              <div class="carousel-item">
+                <img src="생수이미지.png" class="d-block w-100" alt="alt"  >
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" style="margin-left: 250px;">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"style="margin-right: 250px;">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <div class="conatiner">
+            main
+            <div class="row">
+            <div class="col" id="box_s" >
+                <div id="box_x"><a href="https://www.coupang.com/vp/products/106776148?itemId=322767817&vendorItemId=3000056306&q=%EB%85%B9%EC%B0%A8&itemsCount=36&searchId=8ce8aa558c2d4fa38c08baa14d2c6efb&rank=27&isAddedCart=" target="_blank">
+                <button id="btn_n"><img src="녹차이미지.png" alt="sc" id="I_size"></button></a> <button id="ar" class="btn_h" id="rhks1">❤</button></div></div>
+
+            <div class="col" id="box_s">
+                <div id="box_x"><a href="https://www.coupang.com/vp/products/6526515188?itemId=14509495793&vendorItemId=81752433009&q=%EC%82%AC%EA%B3%BC&itemsCount=36&searchId=efbf710260d44013b05ce495c81ead28&rank=13&isAddedCart=" target="_blank">
+                <button id="btn_n"><img src="사과이미지.png" alt="sc" id="I_size"></button></a> <button id="ar" class="btn_h" id="rhks2">❤</button></div></div>
+            
+            <div class="col" id="box_s" >
+                <div id="box_x"><a href="https://www.coupang.com/vp/products/1379447438?itemId=2413555982&vendorItemId=70407963953&pickType=COU_PICK&q=%EC%9A%B0%EC%82%B0&itemsCount=36&searchId=f4f1d1e7e59d4955809b0be1ba833dd8&rank=2&isAddedCart=" target="_blank">
+                <button id="btn_n"><img src="우산이미지.png" alt="sc" id="I_size"></button></a> <button id="ar" class="btn_h" id="rhks3">❤</button></div></div>
+            </div>
+
+            <div class="row">
+            <div class="col" id="box_s" >
+                <div id="box_x"><a href="https://www.coupang.com/vp/products/221307135?itemId=691074472&vendorItemId=4770692342&q=%EB%AA%A8%EB%8B%88%ED%84%B0&itemsCount=36&searchId=ec2d876c2b774044a44803a5e6e1c36f&rank=3&isAddedCart=" target="_blank">
+                <button id="btn_n"><img src="모니터이미지.png" alt="sc" id="I_size"></button></a> <button id="ar" class="btn_h" id="rhks4">❤</button></div></div>
+            
+            <div class="col"  id="box_s">
+                <div id="box_x"><a href="https://www.coupang.com/vp/products/5398078819?itemId=8068840734&vendorItemId=74947677469&pickType=COU_PICK&q=%EC%8B%A0%EB%B0%9C&itemsCount=36&searchId=ce5342a13dd7468093b12681c479b92b&rank=1&isAddedCart=" target="_blank">
+                <button id="btn_n"><img src="신발이미지.png" alt="sc" id="I_size"></button></a> <button id="ar" class="btn_h" id="rhks5">❤</button></div></div>
+
+            <div class="col" id="box_s">
+                <div id="box_x"><a href="https://www.coupang.com/vp/products/5625704601?itemId=11696984031&vendorItemId=79548063314&pickType=COU_PICK&q=%EC%83%9D%EC%88%98&itemsCount=36&searchId=937d032267da42699015952c418ae418&rank=1&isAddedCart=" target="_blank">
+                <button id="btn_n"><img src="생수이미지.png" alt="sc" id="I_size"></button></a> <button id="ar" class="btn_h" id="rhks6">❤</button></div></div>
+            </div>
+
+            <div class="row">
+                <div class="col"></div>
+            <div class="col" id="box_s">
+                <div id="box_x"><a href="https://www.coupang.com/vp/products/5768394698?itemId=9792619369&vendorItemId=77076203252&sourceType=srp_product_ads&clickEventId=0be75f51-c1c6-4bd4-9cc9-a664f9587363&korePlacement=15&koreSubPlacement=1&q=%EC%B1%85%EC%9E%A5&itemsCount=" target="_blank">
+                <button id="btn_n"><img src="책장이미지.png" alt="sc" id="I_size"></button></a> <button id="ar" class="btn_h" id="rhks7">❤</button></div></div>
+                <div class="col"></div>
+            </div>
+
+            <div id="bottom">
+
+            </div>
+
+        </div>
+    </div>
+
+
+    
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector("#rhks1").addEventListener('click',function(){
+            localStorage.setItem('img1',"1");   
+        });
+        document.querySelector("#rhks2").addEventListener('click',function(){
+            localStorage.setItem('img2',"2");   
+        });
+        document.querySelector("#rhks3").addEventListener('click',function(){
+            localStorage.setItem('img3',"3");
+        })
+        document.querySelector("#rhks4").addEventListener('click',function(){
+            localStorage.setItem('img4',"4");   
+        });
+        document.querySelector("#rhks5").addEventListener('click',function(){
+            localStorage.setItem('img5',"5");   
+        });
+        document.querySelector("#rhks6").addEventListener('click',function(){
+            localStorage.setItem('img6',"6");
+        })
+        document.querySelector("#rhks7").addEventListener('click',function(){
+            localStorage.setItem('img7',"7");
+        })
+
+    </script>
+
+    
+    
+    
+
+    
+</body>
+</html>
+
+<!-- 올해 또는 이번 달의 인기 있는 것을 소개(@@)하는 웹페이지
+ㄴ@@의 이미지를 돋보이게 연출 <<<<<<<<<<<<<나중에 시간이 남으면 구현>>>>>>>>>>>>>
+
+
+
+ㄴ@@이 제품일 경우 바로 이동버튼(이미지 클릭)과 관심버튼을 이미지 옆에 배치해 사용자가 쉽게 제품을 확인하도록 구현++
+
+제품의 번호를 기억 
+제품의 번호를 불러오고 
+제품의 사진을 출력
+
+
+
+
+
+ㄴ관심버튼을 누른 제품은 다른 화면에서 한눈에 볼 수 있게 구현++
+ㄴ추천 @@
+ㄴ@@의 정보
+ㄴ 추가로 하트버튼모양도 수정
+ㄴ -->
+
