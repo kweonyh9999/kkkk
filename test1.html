@@ -1,13 +1,25 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+    <head><!-- CSS only -->
+        <script src="./recommend.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <style>
+        .box_s{
+            width: 250px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 10px 10px 10px 10px ;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding: 20px;
 
-          
+        }
+        .box_s:hover{
+            background: rgb(223, 223, 223);
+        }
+        .con{
+            margin: 0 auto;
+            text-align: center;
+        }   
         .bar{
             margin-left: 2px;
             height: 20px;
@@ -23,6 +35,12 @@
         button{
             border: 0px solid white;
             background-color: white;
+        }
+        #head{
+            font-family: 'Courier New', Courier, monospace;
+            height: 150px;
+            background: rgb(255, 255, 255);
+            
         }
         .cc{
             
@@ -53,52 +71,16 @@
             width: 201px;
             border-top: 2px solid rgb(83, 83, 83);
         }
-        
-        .con{
-                margin:  0 auto;
-                text-align: center;
-                
-            }
         .I_size{
             width: 200px;
             height: 200px;
             
             
         }
-        #head{
-            font-family: 'Courier New', Courier, monospace;
-            height: 150px;
-            background: rgb(255, 255, 255);
-            
-            
-        }
-        .ar{
-            float: left;
-        }
-        .box_s{
-            width: 250px;
-            margin: auto;
-            margin-top: 50px;
-            border-radius: 10px 10px 10px 10px ;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding: 20px;
-
-        }
-        .box_s:hover{
-            background: rgb(223, 223, 223);
-        }
-         
-            
-       
         </style>
-        <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
-    <body >
-        
-        <div id="box" class="con">
-
+    <body>
+        <div class="con">
             <div id="head">
                 <h1 style="color: rgb(83, 83, 83); font-size: 80px; padding-bottom: 0px;" >A</h1>
                 <div class="cd">
@@ -106,30 +88,27 @@
                         <div class="bar" style="margin-left : 0"><a href="test0.html" class="text_d" style="color: rgb(141, 141, 141);"><button style="width: 100px; " >back</button> </a> </div>
                     </div>
                     <div class="cc" style="float:right">
-                    <div class="bar" ><a href="test1.html" class="text_d" style="color: rgb(141, 141, 141);"><button style="width: 100px;">recommend</button></a></div>
+                    <div class="bar" ><a href="test1-1.html" target="_blank" class="text_d" style="color: rgb(141, 141, 141);"><button style="width: 100px;">wish list</button></a></div>
                     </div>
                 </div>
             </div>
-
-        
-        <div class="con" style = "width: 1200px; border-top: 2px solid rgb(83, 83, 83);">
-            <div class="row" id="page_1" calss = "">
-            
+            <div class="con" style = "width: 1200px; border-top: 2px solid rgb(83, 83, 83);">
+                    <div class="row" id="page_1" >
+                    
+                    </div>
+            </div>
+            <div style="height: 1000px;">
+                
             </div>
         </div>
-
-        <div style="height: 1000px;">
-
-        </div>
-           
-        </div>
+        
 
         <script>
-            window.addEventListener('load',function(){
+            
                 const gArray = JSON.parse(localStorage.getItem('liked_items')) || [];
-                console.log(gArray)
-            for ( let i = 0;i < gArray.length; i++ ) {
-                const item = gArray[i];
+                
+            for ( let i = 0;i < brr.length; i++ ) {
+                const item = brr[i];
 
                 const div = document.createElement('div');
                 div.className = 'col col-4 ';
@@ -155,19 +134,35 @@
                 a.appendChild(imgBtn);
                 imgBtn.appendChild(img);
 
-                div.appendChild(box);
-                console.log(div);
-                document.querySelector('#page_1').appendChild(div);
+                const likeDiv = document.createElement('div');
+            
 
-            }                
+            const likeBtn = document.createElement('button');
+            likeBtn.innerText = '❤';
+            likeBtn.className = 'like_b';
+            likeBtn.addEventListener('click', function() {
+                for ( let j = 0 ;j < gArray.length;j++ ) {
+                    const ga = gArray[j];
+                    if ( ga.link === item.link ) {
+                        return;
+                    }
+                }
+                gArray.push(item);
+                localStorage.setItem('liked_items', JSON.stringify(gArray));
             });
 
+            likeDiv.appendChild(likeBtn);
+
+            div.appendChild(box);
+            div.appendChild(likeDiv);
+            document.querySelector('#page_1').appendChild(div);
+
+            }
+
     </script>
+        
         <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        
-        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
     </body>
 </html>
-<!-- 이미지 삽입
-img변수 선언  -->
